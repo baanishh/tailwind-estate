@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        @apply scroll-smooth;
+    }
+    body{
+        @apply text-white bg-[#141414] tracking-wider ; 
+    }
+}
+
+@layer components {
+    .rotate-logo {
+        @apply inline-block animate-spin;
+        animation: spin 3s linear infinite;
+    }
+}
+
+/* Additional keyframes for custom rotation (optional) */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
